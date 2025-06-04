@@ -610,7 +610,7 @@ section .title::after {
 }
 
 .about .about-content .right .text span {
-    color: var(--heading-color); /* Highlight color */
+    color: #4ADEDD;
 }
 
 .about .about-content .right .paragraph {
@@ -623,21 +623,21 @@ section .title::after {
 }
 
 .about .about-content .right a {
-    display: inline-block; /* Inline block for links */
-    background: none; /* No background */
-    color: var(--heading-color); /* Link color */
-    margin-top: 20px; /* Space above link */
-    font-size: 20px; /* Link font size */
-    font-weight: 500; /* Link font weight */
-    padding: 5px 30px; /* Padding for link */
-    border-radius: 6px; /* Rounded corners */
-    border: 2px solid var(--heading-color); /* Border */
-    transition: all 0.3s ease; /* Transition effect */
+    display: inline-block;
+    background: transparent;
+    color: #4ADEDD;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 6px;
+    border: 2px solid #4ADEDD;
+    transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover {
-    color: var(--text-color); /* Change color on hover */
-    background: none; /* No background */
+    background: rgba(74, 222, 221, 0.1);
+    color: #4ADEDD;
 }
 
 /* Media Queries for Responsiveness */
@@ -1763,7 +1763,7 @@ footer i:hover {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: var(--heading-color);
+    background-color: white;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -1792,8 +1792,8 @@ footer i:hover {
     width: 25px;
     height: 25px;
     right: -12.5px;
-    background-color: #1a237e;
-    border: 3px solid #1a237e;
+    background-color: white;
+    border: 3px solid white;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -1852,7 +1852,7 @@ footer i:hover {
 
 .timeline-content .role-points li:before {
     content: "•";
-    color: var(--heading-color);
+    color: white;
     font-size: 20px;
     position: absolute;
     left: 0;
@@ -1950,7 +1950,7 @@ footer i:hover {
 
 .education-icon {
     font-size: 60px;
-    color: var(--heading-color);
+    color: white;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -2379,25 +2379,27 @@ footer i:hover {
 }
 
 .btn-project {
-    background: #1a237e; /* Navy blue */
-    color: white;
+    background: transparent;
+    color: #4ADEDD;
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease;
-    border: 2px solid #1a237e;
+    border: 2px solid #4ADEDD;
 }
 
 .btn-project:hover {
-    background: transparent;
-    color: #1a237e;
+    background: rgba(74, 222, 221, 0.1);
+    color: #4ADEDD;
 }
 
 .btn-demo {
-    background: #1a237e;
+    background: transparent;
+    border: 2px solid #4ADEDD;
+    color: #4ADEDD;
 }
 
 .btn-demo:hover {
-    background: #0d47a1; /* Darker navy blue */
+    background: rgba(74, 222, 221, 0.1);
 }
 
 /* Media Queries for Projects Section */
@@ -2511,22 +2513,24 @@ footer i:hover {
 }
 
 [data-theme="light"] .btn-project {
-    border: 1px solid rgba(126, 34, 206, 0.7);
-    color: #222;
+    border: 2px solid #4ADEDD;
+    color: #4ADEDD;
+    background: transparent;
 }
 
 [data-theme="light"] .btn-project:hover {
-    background: rgba(126, 34, 206, 0.3);
-    color: #000;
+    background: rgba(74, 222, 221, 0.1);
+    color: #4ADEDD;
 }
 
 [data-theme="light"] .btn-demo {
-    background: rgba(126, 34, 206, 0.3);
-    color: #000;
+    background: transparent;
+    border: 2px solid #4ADEDD;
+    color: #4ADEDD;
 }
 
 [data-theme="light"] .btn-demo:hover {
-    background: rgba(126, 34, 206, 0.5);
+    background: rgba(74, 222, 221, 0.1);
 }
 
 [data-theme="light"] .logo img {
@@ -2545,4 +2549,9 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/* Make the project diagram icon white in education achievements */
+.education-achievements .achievement i {
+    color: var(--heading-color);
 }
