@@ -4,13 +4,13 @@
   /* Dark Mode (Default) */
   --background: url("images/BB.png") no-repeat center;
   --text-color: white;
-  --heading-color: #be50f4;
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --card-hover-bg: rgba(255, 255, 255, 0.2);
-  --navbar-bg: linear-gradient(180deg, rgba(45, 30, 55, 0.9) 0%, rgba(29, 29, 29, 0.6) 100%);
+  --heading-color: #1a237e; /* Navy blue for headings */
+  --card-bg: rgba(26, 35, 126, 0.1); /* Navy blue with transparency */
+  --card-hover-bg: rgba(26, 35, 126, 0.2);
+  --navbar-bg: linear-gradient(180deg, rgba(26, 35, 126, 0.9) 0%, rgba(13, 71, 161, 0.6) 100%);
   --footer-bg: transparent;
-  --box-shadow: 0px 10px 50px 5px #00000038;
-  --card-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  --box-shadow: 0px 10px 50px 5px rgba(26, 35, 126, 0.3);
+  --card-shadow: 0px 5px 15px rgba(26, 35, 126, 0.3);
   --toggle-icon: "\f185"; /* sun */
 }
 
@@ -18,13 +18,13 @@
   --background-color: transparent;
   --background-image: url("images/BB2.png");
   --text-color: #333;
-  --heading-color: #7e22ce;
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --card-hover-bg: rgba(255, 255, 255, 0.95);
+  --heading-color: #1a237e; /* Navy blue for headings */
+  --card-bg: rgba(26, 35, 126, 0.1);
+  --card-hover-bg: rgba(26, 35, 126, 0.2);
   --navbar-bg: url("images/BB2.png") no-repeat center;
-  --footer-bg: rgba(255, 255, 255, 0.7);
-  --box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
-  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --footer-bg: rgba(26, 35, 126, 0.1);
+  --box-shadow: 0px 10px 40px rgba(26, 35, 126, 0.1);
+  --card-shadow: 0 5px 15px rgba(26, 35, 126, 0.08);
   --toggle-icon: "\f186"; /* moon */
 }
 
@@ -978,8 +978,8 @@ section .title::after {
     padding: 25px;
     box-shadow: var(--card-shadow);
     transition: all 0.4s ease;
-    border-left: 3px solid rgba(190, 80, 244, 0.6);
-    border-bottom: 3px solid rgba(190, 80, 244, 0.6);
+    border-left: 3px solid rgba(26, 35, 126, 0.6);
+    border-bottom: 3px solid rgba(26, 35, 126, 0.6);
     overflow: hidden;
     position: relative;
 }
@@ -991,16 +991,14 @@ section .title::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(190, 80, 244, 0.05) 0%, rgba(190, 80, 244, 0.01) 100%);
+    background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(26, 35, 126, 0.01) 100%);
     z-index: -1;
 }
 
 .skill-category:hover {
-    transform: translateY(-8px);
-    background: var(--card-hover-bg);
-    box-shadow: 0 10px 30px rgba(190, 80, 244, 0.25);
-    border-left: 3px solid rgba(190, 80, 244, 1);
-    border-bottom: 3px solid rgba(190, 80, 244, 1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+    border-color: #1a237e;
 }
 
 .skill-category h3 {
@@ -1040,7 +1038,7 @@ section .title::after {
     border-radius: 50px;
     width: fit-content;
     transition: all 0.3s ease;
-    border: 1px solid rgba(190, 80, 244, 0.1);
+    border: 1px solid rgba(26, 35, 126, 0.1);
 }
 
 .skill-item:hover {
@@ -1577,12 +1575,12 @@ footer i:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--heading-color); /* Handle color */
+    background: #1a237e;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--heading-color); /* Handle color on hover */
+    background: #0d47a1;
 }
 
 /* Media Queries for Responsiveness */
@@ -1794,8 +1792,8 @@ footer i:hover {
     width: 25px;
     height: 25px;
     right: -12.5px;
-    background-color: var(--heading-color);
-    border: 4px solid #250b32;
+    background-color: #1a237e;
+    border: 3px solid #1a237e;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -1945,8 +1943,9 @@ footer i:hover {
 }
 
 .education-card:hover {
-    transform: translateY(-10px);
-    background: var(--card-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+    border-color: #1a237e;
 }
 
 .education-icon {
@@ -1980,7 +1979,7 @@ footer i:hover {
 }
 
 .gpa-badge {
-    background: rgba(190, 80, 244, 0.15);
+    background: rgba(26, 35, 126, 0.15);
     border-radius: 30px;
     padding: 8px 20px;
     display: flex;
@@ -1988,7 +1987,7 @@ footer i:hover {
     justify-content: center;
     width: fit-content;
     margin: 0 auto 20px;
-    border: 1px solid rgba(190, 80, 244, 0.3);
+    border: 1px solid rgba(26, 35, 126, 0.3);
 }
 
 .gpa-badge i {
@@ -2060,7 +2059,7 @@ footer i:hover {
 .achievement {
     display: flex;
     align-items: center;
-    background: rgba(190, 80, 244, 0.1);
+    background: rgba(26, 35, 126, 0.1);
     border-radius: 50px;
     padding: 10px 20px;
     transition: all 0.3s ease;
@@ -2075,7 +2074,7 @@ footer i:hover {
 }
 
 .achievement:hover {
-    background: rgba(190, 80, 244, 0.3);
+    background: rgba(26, 35, 126, 0.3);
     transform: scale(1.05);
 }
 
@@ -2221,9 +2220,9 @@ footer i:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(190, 80, 244, 0.2);
-    background: var(--card-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+    border-color: #1a237e;
 }
 
 .project-img {
@@ -2264,7 +2263,7 @@ footer i:hover {
 }
 
 .project-type {
-    background: rgba(190, 80, 244, 0.7);
+    background: rgba(26, 35, 126, 0.7);
     color: var(--text-color);
     padding: 8px 16px;
     border-radius: 20px;
@@ -2380,35 +2379,25 @@ footer i:hover {
 }
 
 .btn-project {
-    display: inline-flex;
-    align-items: center;
+    background: #1a237e; /* Navy blue */
+    color: white;
     padding: 10px 20px;
-    background: rgba(190, 80, 244, 0.1);
-    color: var(--text-color);
-    border: 1px solid rgba(190, 80, 244, 0.5);
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
+    border-radius: 5px;
     transition: all 0.3s ease;
-}
-
-.btn-project i {
-    margin-right: 8px;
-    font-size: 18px;
+    border: 2px solid #1a237e;
 }
 
 .btn-project:hover {
-    background: rgba(190, 80, 244, 0.3);
-    transform: translateY(-3px);
+    background: transparent;
+    color: #1a237e;
 }
 
 .btn-demo {
-    background: rgba(190, 80, 244, 0.3);
+    background: #1a237e;
 }
 
 .btn-demo:hover {
-    background: rgba(190, 80, 244, 0.5);
+    background: #0d47a1; /* Darker navy blue */
 }
 
 /* Media Queries for Projects Section */
@@ -2506,7 +2495,7 @@ footer i:hover {
 }
 
 .theme-toggle:hover {
-  background: rgba(190, 80, 244, 0.2);
+  background: rgba(26, 35, 126, 0.2);
   transform: scale(1.1);
 }
 
