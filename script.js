@@ -33,9 +33,9 @@ $(document).ready(function () {
              
     // typing animation script
     var typed = new Typed(".typing",{
-        strings: ["iOS Developer" ],
-        typeSpeed: 100,
-        backSpeed: 60,
+        strings: ["iOS Developer", "UI/UX Designer" ],
+        typeSpeed: 80,
+        backSpeed: 40,
         loop: true,
         fadeOut: true,
         

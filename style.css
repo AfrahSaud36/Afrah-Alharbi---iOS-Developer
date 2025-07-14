@@ -7,7 +7,7 @@
   --heading-color: #1a237e; /* Navy blue for headings */
   --card-bg: rgba(26, 35, 126, 0.1); /* Navy blue with transparency */
   --card-hover-bg: rgba(26, 35, 126, 0.2);
-  --navbar-bg: linear-gradient(180deg, rgba(26, 35, 126, 0.9) 0%, rgba(13, 71, 161, 0.6) 100%);
+  --navbar-bg: transparent; /* Make navbar background transparent */
   --footer-bg: transparent;
   --box-shadow: 0px 10px 50px 5px rgba(26, 35, 126, 0.3);
   --card-shadow: 0px 5px 15px rgba(26, 35, 126, 0.3);
@@ -21,7 +21,7 @@
   --heading-color: #1a237e; /* Navy blue for headings */
   --card-bg: rgba(26, 35, 126, 0.1);
   --card-hover-bg: rgba(26, 35, 126, 0.2);
-  --navbar-bg: url("images/BB2.png") no-repeat center;
+  --navbar-bg: transparent; /* Make navbar background transparent in light mode too */
   --footer-bg: rgba(26, 35, 126, 0.1);
   --box-shadow: 0px 10px 40px rgba(26, 35, 126, 0.1);
   --card-shadow: 0 5px 15px rgba(26, 35, 126, 0.08);
@@ -76,6 +76,7 @@ body {
     transition: all 0.3s ease;
     background: var(--navbar-bg);
     backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add simple border */
 }
 
 [data-theme="light"] .navbar {
@@ -1279,24 +1280,71 @@ section .title::after {
     display: flex; /* Flex display for row */
     height: 65px; /* Fixed height for row */
     align-items: center; /* Center items vertically */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 10px; /* Space between rows */
+}
+
+.contact .contact-content .row:hover {
+    background: var(--card-bg); /* Background on hover */
+    transform: translateX(10px); /* Slide right effect */
+    box-shadow: var(--card-shadow); /* Add shadow on hover */
 }
 
 .contact .contact-content .row .info {
     margin-left: 30px; /* Margin for info */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .contact-content .row:hover .info {
+    transform: scale(1.05); /* Slightly scale up text */
 }
 
 .contact .contact-content .row i {
     font-size: 25px; /* Icon size */
     color: var(--heading-color); /* Icon color */
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 10px; /* Add padding around icon */
+    border-radius: 50%; /* Circular background */
+    background: rgba(74, 222, 221, 0.1); /* Light background */
+}
+
+.contact .contact-content .row:hover i {
+    color: #4ADEDD; /* Change color on hover */
+    background: rgba(74, 222, 221, 0.2); /* Darker background on hover */
+    transform: rotate(360deg) scale(1.2); /* Rotate and scale effect */
 }
 
 .contact .contact-content .info .head {
     color: var(--text-color); /* Head text color */
     font-weight: 600; /* Font weight */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .contact-content .row:hover .info .head {
+    color: #4ADEDD; /* Change color on hover */
 }
 
 .contact .contact-content .info .sub-title {
     color: var(--text-color); /* Subtitle color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .contact-content .row:hover .info .sub-title {
+    color: #4ADEDD; /* Change color on hover */
+}
+
+.contact .contact-content .info .sub-title a {
+    color: var(--text-color); /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .contact-content .row:hover .info .sub-title a {
+    color: #4ADEDD; /* Change link color on hover */
+    text-decoration: underline; /* Add underline on hover */
 }
 
 .contact .right form .fields {
@@ -2554,4 +2602,111 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
 /* Make the project diagram icon white in education achievements */
 .education-achievements .achievement i {
     color: var(--heading-color);
+}
+
+/* Home Icons Animation - Fixed */
+.home .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.home .icons a {
+    display: inline-block;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
+    animation: iconPulse 0.8s ease-out forwards;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.home .icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #4ADEDD, #1a237e);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.home .icons a:hover::before {
+    transform: scale(1.3);
+}
+
+.home .icons a:hover {
+    transform: translateY(-10px) scale(1.15);
+    box-shadow: 0 15px 30px rgba(74, 222, 221, 0.4);
+}
+
+.home .icons a img {
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    display: block;
+}
+
+.home .icons a:hover img {
+    transform: rotate(360deg);
+    filter: brightness(1.3) contrast(1.1);
+}
+
+/* Individual icon animation delays */
+.home .icons a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.home .icons a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.home .icons a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.home .icons a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.home .icons a:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+@keyframes iconPulse {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contact Icons Animation - Simplified */
+.contact .contact-content .row img {
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.contact .contact-content .row:hover img {
+    transform: translateY(-10px) scale(1.1) rotate(360deg);
+    filter: brightness(1.3) contrast(1.1);
+    box-shadow: 0 10px 20px rgba(74, 222, 221, 0.3);
 }
