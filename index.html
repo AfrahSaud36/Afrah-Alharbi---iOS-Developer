@@ -733,6 +733,7 @@
     // Enhanced Scroll Progress Bar
     window.onscroll = function() {
       updateProgressBar();
+      handleStickyNavbar(); // Add sticky navbar functionality back
       handleNavbarScroll();
       revealSections();
     };
@@ -744,20 +745,39 @@
       document.getElementById("myBar").style.width = scrolled + "%";
     }
 
+    // Sticky Navbar Function
+    function handleStickyNavbar() {
+      const navbar = document.querySelector('.navbar');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 50) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+
     // Smart Navbar Hide/Show on Scroll
     let lastScrollTop = 0;
     function handleNavbarScroll() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const navbar = document.querySelector('.navbar');
       
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down
-        navbar.classList.add('navbar-hidden');
-        navbar.classList.remove('navbar-visible');
+      // Only hide/show navbar if user has scrolled enough
+      if (scrollTop > 200) {
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down - hide navbar
+          navbar.classList.add('navbar-hidden');
+          navbar.classList.remove('navbar-visible');
+        } else {
+          // Scrolling up - show navbar
+          navbar.classList.remove('navbar-hidden');
+          navbar.classList.add('navbar-visible');
+        }
       } else {
-        // Scrolling up
+        // Always show navbar when near top
         navbar.classList.remove('navbar-hidden');
-        navbar.classList.add('navbar-visible');
+        navbar.classList.remove('navbar-visible'); // Let default styles show
       }
       lastScrollTop = scrollTop;
     }
@@ -790,14 +810,17 @@
       });
     }
 
-    // Parallax Effect for Background
+    // Parallax Effect for Background (disabled on desktop to prevent white background)
     function addParallaxEffect() {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('body');
-        const speed = scrolled * 0.5;
-        parallax.style.backgroundPosition = `center ${speed}px`;
-      });
+      // Only enable parallax on mobile devices to prevent white background issues on desktop
+      if (window.innerWidth <= 768) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          const parallax = document.querySelector('body');
+          const speed = scrolled * 0.3; // Reduced speed for better performance
+          parallax.style.backgroundPosition = `center ${speed}px`;
+        });
+      }
     }
 
     // Smooth Scroll for Navigation Links
@@ -821,6 +844,12 @@
       addTouchInteractions();
       addParallaxEffect();
       addSmoothScrolling();
+      
+      // Ensure navbar is visible on load
+      const navbar = document.querySelector('.navbar');
+      navbar.style.opacity = '1';
+      navbar.style.visibility = 'visible';
+      navbar.style.transform = 'translateY(0)';
       
       // Add reveal class to sections
       document.querySelectorAll('section').forEach(section => {
