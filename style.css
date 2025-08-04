@@ -43,6 +43,83 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Enhanced scroll behavior and page transitions */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Page Loading Animation */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a237e 0%, #4ADEDD 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.page-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    color: white;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Smooth Section Reveals */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Parallax Effect */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    will-change: transform;
+}
+
+/* Smooth Hover Animations */
+.smooth-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.smooth-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
 body {
     background: var(--background);
     background-size: cover;
@@ -86,10 +163,23 @@ body {
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--navbar-bg);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add simple border */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+}
+
+/* Modern Navbar Animations */
+.navbar.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.navbar.navbar-visible {
+    transform: translateY(0);
+    background: rgba(26, 35, 126, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .navbar {
@@ -176,35 +266,42 @@ body {
     font-size: 18px;
     font-weight: 600;
     margin-left: 25px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: var(--text-color);
     text-decoration: none;
     display: inline-block;
     padding: 15px 20px;
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.navbar .menu a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
+/* Modern Menu Item Hover Effect */
+.navbar .menu li a::before {
+    content: '';
     position: absolute;
-    background: var(--text-color);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 222, 221, 0.1), rgba(26, 35, 126, 0.1));
+    border-radius: 12px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
 }
 
-.navbar .menu a:hover:after {
-    width: 100%;
-    left: 0;
+.navbar .menu li a:hover::before {
+    transform: scaleX(1);
 }
 
 .navbar .menu li a:hover {
-    color: var(--heading-color);
+    color: #4ADEDD;
+    transform: translateY(-2px);
 }
+
+/* Remove old underline effect - replaced with modern hover */
 
 .navbar.sticky .menu li a:hover {
     color: var(--text-color);
@@ -1054,14 +1151,32 @@ section .title::after {
     flex: 1 1 300px;
     max-width: 350px;
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 25px;
     box-shadow: var(--card-shadow);
-    transition: all 0.4s ease;
-    border-left: 3px solid rgba(74, 222, 221, 0.6);
-    border-bottom: 3px solid rgba(74, 222, 221, 0.6);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid rgba(74, 222, 221, 0.2);
     overflow: hidden;
     position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Modern Skill Category Glow */
+.skill-category::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(74, 222, 221, 0.1) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.skill-category:hover::after {
+    transform: scale(1);
 }
 
 .skill-category::before {
@@ -1076,8 +1191,8 @@ section .title::after {
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(74, 222, 221, 0.3);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(74, 222, 221, 0.4);
     border-color: #4ADEDD;
 }
 
@@ -2479,16 +2594,46 @@ footer i:hover {
 .project-card {
     display: flex;
     background: var(--card-bg);
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
-    transition: all 0.4s ease;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern Card Glowing Effect */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #4ADEDD, #1a237e, #4ADEDD);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.project-card:hover::before {
+    opacity: 0.7;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
-    border-color: #1a237e;
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(26, 35, 126, 0.4);
+    border-color: #4ADEDD;
 }
 
 .project-img {
@@ -3025,5 +3170,154 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
     img {
         max-width: 100%;
         height: auto;
+    }
+}
+
+/* Enhanced Mobile Touch Interactions */
+@media (max-width: 768px) {
+    /* Improve touch target sizes */
+    .navbar .menu li a,
+    .btn-project,
+    .icons a,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Add touch feedback */
+    .project-card,
+    .skill-category,
+    .timeline-content,
+    .education-card {
+        -webkit-tap-highlight-color: rgba(74, 222, 221, 0.2);
+        tap-highlight-color: rgba(74, 222, 221, 0.2);
+    }
+    
+    /* Smooth touch scrolling */
+    body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Enhanced button interactions */
+    .btn-project,
+    .download-resume,
+    #btnScrollToTop {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+    
+    .btn-project:active,
+    .download-resume:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Modern Floating Elements */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-elements::before,
+.floating-elements::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(74, 222, 221, 0.1), rgba(26, 35, 126, 0.1));
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-elements::before {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.floating-elements::after {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Smooth Text Animations */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid #4ADEDD;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4ADEDD }
+}
+
+/* Enhanced Scroll Indicators */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+}
+
+.scroll-indicator::before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, #4ADEDD);
+    display: block;
+    margin: 0 auto 10px;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        height: 10px;
+        opacity: 0;
+    }
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 10px;
+        opacity: 0;
     }
 }
