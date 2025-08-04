@@ -67,6 +67,19 @@ body {
     margin: auto;
 }
 
+/* Mobile-responsive max-width padding */
+@media (max-width: 768px) {
+    .max-width {
+        padding: 0 20px; /* Much smaller padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .max-width {
+        padding: 0 15px; /* Even smaller for phones */
+    }
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -456,24 +469,25 @@ body {
         flex-direction: column;
         align-items: center;
         height: auto;
-        padding: 80px 0 30px; /* Top padding increased, bottom padding reduced */
+        padding: 60px 0 20px; /* Reduced padding for mobile */
+        min-height: auto; /* Remove minimum height constraint */
     }
 
     .home .max-width {
         margin: 0;
-        padding: 0 20px;
+        padding: 0 15px; /* Reduced padding */
         width: 100%;
     }
 
     .home .max-width .home-content {
         flex-direction: column-reverse; /* Image first, then text */
-        padding-top: 60px; /* Remove top padding as we've added it to .home */
-        gap: 30px; /* Space between image and text */
+        padding-top: 20px; /* Much smaller top padding */
+        gap: 20px; /* Reduced space between image and text */
     }
     
     .text-container {
         width: 100%;
-        margin-top: 15px;
+        margin-top: 10px;
         padding-right: 0;
         text-align: center;
     }
@@ -486,7 +500,7 @@ body {
     
     .image-container img {
         margin: 0 auto;
-        max-width: 70%;
+        max-width: 60%; /* Smaller image */
         height: auto;
     }
     
@@ -494,31 +508,59 @@ body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 25px;
+        gap: 10px; /* Smaller gap */
+        margin-top: 15px; /* Less margin */
+    }
+    
+    .home .home-content .text-1 {
+        font-size: 16px; /* Much smaller for mobile */
+        line-height: 1.4;
     }
     
     .home .home-content .text-2 {
-        font-size: 50px; /* Further reduce heading size */
-        margin-top: 10px;
+        font-size: 32px; /* Much smaller heading size for mobile */
+        margin-top: 5px;
+        line-height: 1.2;
     }
     
     .home .home-content .text-3 {
-        font-size: 28px; /* Further reduce subheading size */
+        font-size: 20px; /* Much smaller subheading size for mobile */
+        margin: 5px 0;
     }
 }
 
 @media (max-width: 480px) {
+    .home {
+        padding: 40px 0 15px; /* Even more compact padding */
+    }
+
+    .home .home-content .text-1 {
+        font-size: 14px; /* Even smaller for small phones */
+        margin-bottom: 5px;
+    }
+
     .home .home-content .text-2 {
-        font-size: 40px; /* Smaller heading size for phones */
+        font-size: 24px; /* Much smaller heading size for phones */
+        margin: 5px 0;
     }
 
     .home .home-content .text-3 {
-        font-size: 24px; /* Smaller subheading size for phones */
+        font-size: 16px; /* Much smaller subheading size for phones */
+        margin: 5px 0;
     }
 
-    .icons a {
-        font-size: 25px; /* Adjust icon size */
+    .image-container img {
+        max-width: 50%; /* Even smaller image on small phones */
+    }
+
+    .icons {
+        gap: 8px; /* Smaller gap between icons */
+        margin-top: 10px;
+    }
+
+    .icons a img {
+        width: 30px !important; /* Smaller icons */
+        height: 30px !important;
     }
 }
 
@@ -530,6 +572,19 @@ body {
 section {
     padding: 120px 0; /* Top and bottom padding */
     padding-bottom: 300px; /* Additional bottom padding */
+}
+
+/* Mobile-first optimizations */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 0 60px; /* Much smaller padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 30px 0 40px; /* Even smaller for small phones */
+    }
 }
 
 .about, .services, .skills, .contact, footer {
@@ -557,6 +612,21 @@ section .title {
     margin-bottom: 60px; /* Reduced margin since subtitle is gone */
     padding-bottom: 10px; /* Reduced padding since subtitle is gone */
     font-family: 'Ubuntu', sans-serif; /* Title font family */
+}
+
+/* Mobile section title optimization */
+@media (max-width: 768px) {
+    section .title {
+        font-size: 24px; /* Much smaller title for mobile */
+        margin-bottom: 30px; /* Reduced margin */
+    }
+}
+
+@media (max-width: 480px) {
+    section .title {
+        font-size: 20px; /* Even smaller for small phones */
+        margin-bottom: 20px; /* Even smaller margin */
+    }
 }
 
 section .title::before {
@@ -673,51 +743,60 @@ section .title::after {
 }
 
 @media (max-width: 768px) {
-    section {
-        padding: 60px 0; /* Further reduce padding for small screens */
+    .about .about-content {
+        flex-direction: column; /* Stack vertically */
+        text-align: center;
     }
 
-    section .title {
-        font-size: 30px; /* Smaller title font size */
-    }
-
-    section .title::after {
-        font-size: 18px; /* Smaller subtitle font size */
+    .about .about-content .left,
+    .about .about-content .right {
+        width: 100%; /* Full width */
     }
 
     .about .about-content .left img {
         margin-left: 0; /* Remove margin */
+        max-width: 80%; /* Smaller image */
+        width: auto;
+        height: auto;
     }
 
     .about .about-content .right .text {
-        font-size: 20px; /* Adjust text size */
+        font-size: 18px; /* Smaller text size for mobile */
+        margin-bottom: 15px;
     }
 
     .about .about-content .right .paragraph {
-        font-size: 15px; /* Adjust paragraph size */
+        font-size: 14px; /* Smaller paragraph size for mobile */
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .about .about-content .right a {
+        font-size: 16px; /* Smaller button text */
+        padding: 8px 20px; /* Smaller padding */
     }
 }
 
 @media (max-width: 480px) {
-    section {
-        padding: 40px 0; /* Minimal padding for mobile */
-    }
-
-    section .title {
-        font-size: 24px; /* Further smaller title size */
+    .about .about-content .left img {
+        max-width: 70%; /* Even smaller image for small phones */
     }
 
     .about .about-content .right .text {
-        font-size: 18px; /* Further adjust text size */
+        font-size: 16px; /* Even smaller text for small phones */
+        margin-bottom: 10px;
     }
 
     .about .about-content .right .paragraph {
-        font-size: 14px; /* Further adjust paragraph size */
+        font-size: 13px; /* Even smaller paragraph for small phones */
+        line-height: 1.5;
+        margin-bottom: 15px;
     }
 
     .about .about-content .right a {
-        font-size: 16px; /* Further adjust link size */
-        padding: 5px 10px; /* Smaller padding */
+        font-size: 14px; /* Smaller button text for small phones */
+        padding: 6px 15px; /* Smaller padding */
+        margin-top: 15px;
     }
 }
 
@@ -1063,41 +1142,69 @@ section .title::after {
 /* Media Queries for Skills Grid */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .skill-category {
+        max-width: 100%;
+        padding: 15px;
     }
     
     .skill-category h3 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 15px;
     }
     
     .skill-items {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     
     .skill-item {
         padding: 8px 12px;
+        font-size: 13px;
     }
     
     .skill-item i {
-        font-size: 20px;
-    }
-    
-    .skill-item span {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .skill-items {
-        grid-template-columns: 1fr;
-    }
-    
-    .skill-item i {
-        font-size: 18px;
+        font-size: 16px;
+        margin-right: 8px;
     }
     
     .skill-item span {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-category {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .skill-category h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .skill-items {
+        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-item {
+        padding: 6px 10px;
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .skill-item i {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+    
+    .skill-item span {
+        font-size: 12px;
     }
 }
 
@@ -1491,25 +1598,48 @@ section .title::after {
 /* Tablets */
 @media (max-width: 768px) {
     .contact {
-        padding: 30px 0; /* Reduce padding for smaller screens */
+        padding: 20px 0; /* Much smaller padding for mobile */
+    }
+
+    .contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .contact .contact-content .column {
         width: 100%; /* Full width for single column layout */
-        margin-bottom: 20px; /* Margin below columns */
+        margin-bottom: 15px; /* Smaller margin */
+    }
+
+    .contact .contact-content .left img {
+        max-width: 60%; /* Smaller image */
+        margin-left: 0;
     }
 
     .contact .contact-content .text {
-        font-size: 18px; /* Adjust text size */
+        font-size: 16px; /* Smaller text size for mobile */
+        margin-bottom: 15px;
     }
 
     .contact .contact-content .left .paragraph-3 {
-        font-size: 16px; /* Adjust paragraph size */
+        font-size: 14px; /* Smaller paragraph size for mobile */
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
 
-    .contact .right form .field,
-    .contact .right form .fields .field {
-        width: calc(50% - 10px); /* Two fields layout */
+    .contact .contact-content .row {
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        height: auto;
+    }
+
+    .contact .contact-content .row .info {
+        margin-left: 15px;
+    }
+
+    .contact .contact-content .info .sub-title {
+        font-size: 14px;
     }
 }
 
@@ -1918,14 +2048,20 @@ footer i:hover {
 
 /* Media Queries for Timeline Responsiveness */
 @media screen and (max-width: 768px) {
+    .experience {
+        padding: 30px 0; /* Smaller padding for mobile */
+    }
+    
     .timeline::after {
-        left: 31px;
+        left: 20px; /* Adjust line position */
+        width: 3px; /* Thinner line */
     }
     
     .timeline-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 50px; /* Smaller left padding */
+        padding-right: 15px; /* Smaller right padding */
+        margin-bottom: 20px; /* Smaller margin */
     }
     
     .timeline-item:nth-child(even) {
@@ -1933,30 +2069,81 @@ footer i:hover {
     }
     
     .timeline-dot {
-        left: 16px;
+        left: 12px; /* Adjust dot position */
+        width: 15px; /* Smaller dot */
+        height: 15px;
         right: auto;
     }
     
     .timeline-item:nth-child(even) .timeline-dot {
-        left: 16px;
+        left: 12px;
+    }
+    
+    .timeline-content {
+        padding: 15px 20px; /* Smaller padding */
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px; /* Smaller heading */
+        margin-bottom: 8px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 15px; /* Smaller company name */
+        margin-bottom: 5px;
+    }
+    
+    .timeline-content h5 {
+        font-size: 13px; /* Smaller date */
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content .role-points li {
+        font-size: 14px; /* Smaller text */
+        margin-bottom: 8px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .experience {
+        padding: 20px 0; /* Even smaller padding for small phones */
+    }
+    
+    .timeline-item {
+        padding-left: 40px; /* Even smaller left padding */
+        padding-right: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .timeline-content {
+        padding: 12px 15px; /* Smaller padding for small phones */
+    }
+    
     .timeline-content h3 {
-        font-size: 20px;
+        font-size: 16px; /* Much smaller heading for small phones */
+        margin-bottom: 5px;
     }
     
     .timeline-content h4 {
-        font-size: 16px;
+        font-size: 13px; /* Smaller company name for small phones */
+        margin-bottom: 3px;
     }
     
     .timeline-content h5 {
-        font-size: 14px;
+        font-size: 11px; /* Smaller date for small phones */
+        margin-bottom: 8px;
+    }
+    
+    .timeline-content .role-points li {
+        font-size: 12px; /* Smaller text for small phones */
+        margin-bottom: 6px;
+        line-height: 1.4;
+        padding-left: 15px;
     }
     
     .timeline-content p {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 1.4;
     }
 }
 
@@ -2139,105 +2326,136 @@ footer i:hover {
 
 /* Media Queries for Education Section */
 @media screen and (max-width: 768px) {
+    .education {
+        padding: 30px 0; /* Smaller padding for mobile */
+    }
+    
     .education-card {
-        width: 90%;
-        padding: 20px;
+        width: 95%; /* Wider on mobile */
+        padding: 15px; /* Smaller padding */
+        margin: 0 auto;
+    }
+    
+    .education-icon {
+        font-size: 40px; /* Smaller icon */
+        margin-bottom: 15px;
     }
     
     .education-details h3 {
-        font-size: 24px;
+        font-size: 20px; /* Smaller heading */
+        margin-bottom: 8px;
     }
     
     .education-details h4 {
-        font-size: 18px;
+        font-size: 16px; /* Smaller university name */
+        margin-bottom: 5px;
     }
     
     .education-details h5 {
-        font-size: 16px;
+        font-size: 14px; /* Smaller year */
+        margin-bottom: 15px;
     }
     
     .gpa-badge {
-        padding: 6px 15px;
+        padding: 6px 15px; /* Smaller padding */
+        margin-bottom: 15px;
     }
     
     .gpa-badge i {
-        font-size: 16px;
+        font-size: 14px; /* Smaller star */
+        margin-right: 8px;
     }
     
     .gpa-badge span {
-        font-size: 16px;
+        font-size: 14px; /* Smaller text */
     }
     
     .education-details p {
-        font-size: 15px;
+        font-size: 13px; /* Smaller paragraph */
+        margin-bottom: 20px;
     }
     
     .achievement {
-        padding: 8px 15px;
+        padding: 6px 12px; /* Smaller achievement padding */
     }
     
     .achievement i {
-        font-size: 16px;
+        font-size: 14px; /* Smaller icon */
+        margin-right: 8px;
     }
     
     .achievement span {
-        font-size: 14px;
+        font-size: 12px; /* Smaller text */
     }
 }
 
 @media screen and (max-width: 480px) {
+    .education {
+        padding: 20px 0; /* Even smaller padding for small phones */
+    }
+    
     .education-card {
-        width: 95%;
-        padding: 15px;
+        width: 98%; /* Almost full width for small phones */
+        padding: 12px; /* Smaller padding */
     }
     
     .education-icon {
-        font-size: 50px;
+        font-size: 35px; /* Even smaller icon for small phones */
+        margin-bottom: 10px;
     }
     
     .education-details h3 {
-        font-size: 20px;
+        font-size: 18px; /* Smaller heading for small phones */
+        margin-bottom: 5px;
     }
     
     .education-details h4 {
-        font-size: 16px;
+        font-size: 14px; /* Smaller university name for small phones */
+        margin-bottom: 3px;
     }
     
     .education-details h5 {
-        font-size: 14px;
+        font-size: 12px; /* Smaller year for small phones */
+        margin-bottom: 10px;
     }
     
     .gpa-badge {
-        padding: 5px 12px;
+        padding: 4px 10px; /* Smaller padding for small phones */
+        margin-bottom: 12px;
     }
     
     .gpa-badge i {
-        font-size: 14px;
+        font-size: 12px; /* Smaller star for small phones */
+        margin-right: 6px;
     }
     
     .gpa-badge span {
-        font-size: 14px;
+        font-size: 12px; /* Smaller text for small phones */
     }
     
     .education-details p {
-        font-size: 14px;
+        font-size: 12px; /* Smaller paragraph for small phones */
+        margin-bottom: 15px;
+        line-height: 1.4;
     }
     
     .education-achievements {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        margin-top: 8px;
     }
     
     .achievement {
-        padding: 6px 12px;
+        padding: 5px 10px; /* Smaller padding for small phones */
     }
     
     .achievement i {
-        font-size: 14px;
+        font-size: 12px; /* Smaller icon for small phones */
+        margin-right: 6px;
     }
     
     .achievement span {
-        font-size: 12px;
+        font-size: 11px; /* Smaller text for small phones */
     }
 }
 
@@ -2458,24 +2676,6 @@ footer i:hover {
     
     .project-img {
         max-width: 100%;
-        height: 300px;
-    }
-    
-    .project-info h3 {
-        font-size: 24px;
-    }
-    
-    .project-info p {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .projects-container {
-        gap: 40px;
-    }
-    
-    .project-img {
         height: 250px;
     }
     
@@ -2487,43 +2687,91 @@ footer i:hover {
         font-size: 22px;
     }
     
-    .btn-project {
-        padding: 8px 16px;
+    .project-info p {
         font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 30px 0 40px; /* Smaller padding for mobile */
+    }
+    
+    .projects-container {
+        gap: 25px; /* Smaller gap between projects */
+        margin-top: 30px;
+    }
+    
+    .project-img {
+        height: 180px; /* Smaller image height */
+    }
+    
+    .project-info {
+        padding: 15px; /* Smaller padding */
+    }
+    
+    .project-info h3 {
+        font-size: 18px; /* Smaller heading */
+        margin-bottom: 10px;
+    }
+    
+    .project-info p {
+        font-size: 13px; /* Smaller paragraph text */
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .btn-project {
+        padding: 6px 12px; /* Smaller button padding */
+        font-size: 13px; /* Smaller font size */
+    }
+    
+    .project-links {
+        gap: 10px; /* Smaller gap between buttons */
     }
 }
 
 @media screen and (max-width: 480px) {
+    .projects {
+        padding: 20px 0 30px; /* Even smaller padding for small phones */
+    }
+    
+    .projects-container {
+        gap: 20px; /* Smaller gap for small phones */
+        margin-top: 20px;
+    }
+    
     .project-img {
-        height: 200px;
+        height: 150px; /* Much smaller image height for small phones */
     }
     
     .project-info {
-        padding: 15px;
+        padding: 12px; /* Smaller padding for small phones */
     }
     
     .project-info h3 {
-        font-size: 20px;
+        font-size: 16px; /* Smaller heading for small phones */
+        margin-bottom: 8px;
     }
     
     .project-info p {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-    
-    .tech-stack span {
-        font-size: 12px;
-        padding: 4px 12px;
+        font-size: 12px; /* Smaller text for small phones */
+        line-height: 1.4;
+        margin-bottom: 12px;
     }
     
     .project-links {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        margin-top: 10px;
     }
     
     .btn-project {
         width: 100%;
         justify-content: center;
+        padding: 8px 15px;
+        font-size: 12px;
     }
 }
 
@@ -2709,4 +2957,73 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
     transform: translateY(-10px) scale(1.1) rotate(360deg);
     filter: brightness(1.3) contrast(1.1);
     box-shadow: 0 10px 20px rgba(74, 222, 221, 0.3);
+}
+
+/* Global Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Ensure all text is readable on mobile */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Reduce navbar height on mobile */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    /* Optimize scroll button for mobile */
+    #btnScrollToTop {
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    /* Ensure footer is compact on mobile */
+    footer {
+        padding: 15px 10px;
+        font-size: 11px;
+    }
+    
+    footer .text-center {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller text for small phones */
+    body {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    /* Compact navbar for small phones */
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    /* Smaller scroll button for small phones */
+    #btnScrollToTop {
+        width: 35px;
+        height: 35px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    /* Compact footer for small phones */
+    footer {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+    
+    footer .text-center {
+        font-size: 10px;
+    }
+    
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
