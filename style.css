@@ -404,6 +404,9 @@ body {
     background-attachment: fixed;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-weight: bold;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 [data-theme="light"] body {
@@ -419,6 +422,42 @@ body {
         background-position: center top;
         background-repeat: no-repeat;
         min-height: 100vh;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    /* Ensure all content fits mobile */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    /* Optimize cards for mobile */
+    .project-card,
+    .education-card,
+    .timeline-content {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+    
+    /* Optimize text for mobile readability */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Prevent horizontal scroll */
+    section {
+        width: 100%;
+        overflow-x: hidden;
     }
     
     [data-theme="light"] body {
@@ -437,18 +476,24 @@ body {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Mobile-responsive max-width padding */
 @media (max-width: 768px) {
     .max-width {
-        padding: 0 20px; /* Much smaller padding for tablets */
+        padding: 0 15px; /* Optimized padding for tablets */
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
 @media (max-width: 480px) {
     .max-width {
-        padding: 0 15px; /* Even smaller for phones */
+        padding: 0 10px; /* Minimal padding for phones */
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -687,7 +732,7 @@ body {
         width: 100%;
         left: -100%;
         top: 0;
-        background: var(--navbar-bg);
+        background: rgba(0, 0, 0, 0.95);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -703,8 +748,8 @@ body {
         height: 100vh;
         padding-top: 80px;
         z-index: 997;
-        background: var(--navbar-bg);
-        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
     }
 
     .navbar-controls {
@@ -1772,7 +1817,9 @@ section .title::after {
 /* Contact Section Styling */
 .contact {
     background-size: cover; /* Cover background for responsiveness */
-    padding: 50px 0; /* Padding for the section */
+    padding: 30px 0; /* Reduced padding for more compact section */
+    transform: scale(0.9); /* Zoom out the entire section */
+    transform-origin: center;
 }
 
 /* Contact subtitle removed */
@@ -1780,7 +1827,7 @@ section .title::after {
 .contact .contact-content .left img {
     height: auto; /* Maintain aspect ratio */
     width: 100%; /* Make image responsive */
-    max-width: 400px; /* Max width for larger screens */
+    max-width: 300px; /* Reduced max width */
     object-fit: cover; /* Cover the image container */
     border-radius: 6px; /* Rounded corners */
     margin-left: -20px; /* Adjust margin */
@@ -1797,9 +1844,9 @@ section .title::after {
 
 .contact .contact-content .text {
     color: var(--text-color); /* Text color */
-    font-size: 20px; /* Text size */
+    font-size: 18px; /* Reduced text size */
     font-weight: 600; /* Font weight */
-    margin-bottom: 10px; /* Margin below text */
+    margin-bottom: 8px; /* Reduced margin below text */
 }
 
 .contact .contact-content .left p {
@@ -1807,7 +1854,7 @@ section .title::after {
 }
 
 .contact .contact-content .left .paragraph-3 {
-    font-size: 18px; /* Paragraph size */
+    font-size: 16px; /* Reduced paragraph size */
     color: var(--text-color); /* Paragraph color */
 }
 
@@ -1817,13 +1864,13 @@ section .title::after {
 
 .contact .contact-content .row {
     display: flex; /* Flex display for row */
-    height: 65px; /* Fixed height for row */
+    height: 55px; /* Reduced height for row */
     align-items: center; /* Center items vertically */
-    padding: 10px 15px; /* Add padding for better spacing */
-    border-radius: 10px; /* Rounded corners */
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 8px; /* Slightly smaller rounded corners */
     transition: all 0.3s ease; /* Smooth transition */
     cursor: pointer; /* Pointer cursor on hover */
-    margin-bottom: 10px; /* Space between rows */
+    margin-bottom: 8px; /* Reduced space between rows */
 }
 
 .contact .contact-content .row:hover {
@@ -2418,11 +2465,13 @@ footer i:hover {
     background: var(--card-bg);
     border-radius: 6px;
     box-shadow: var(--card-shadow);
+    border: 2px solid rgba(74, 222, 221, 0.3);
     transition: all 0.3s ease;
 }
 
 .timeline-content:hover {
     background: var(--card-hover-bg);
+    border-color: rgba(74, 222, 221, 0.8);
     transform: scale(1.03);
 }
 
@@ -2604,6 +2653,7 @@ footer i:hover {
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--card-shadow);
+    border: 2px solid rgba(74, 222, 221, 0.3);
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -2612,7 +2662,7 @@ footer i:hover {
 .education-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
-    border-color: #1a237e;
+    border-color: rgba(74, 222, 221, 0.8);
 }
 
 .education-icon {
@@ -2916,7 +2966,7 @@ footer i:hover {
     box-shadow: var(--card-shadow);
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(74, 222, 221, 0.3);
 }
 
 /* Modern Card Glowing Effect */
