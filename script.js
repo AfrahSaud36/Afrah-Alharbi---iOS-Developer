@@ -59,57 +59,5 @@ $(document).ready(function () {
       });
     });
 
-// Theme Toggle Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
-    
-    // Check if user has a theme preference stored
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    
-    // Apply the stored theme or default to dark
-    if (currentTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        
-        // Update footer logo on page load
-        const footerLogo = document.querySelector('footer img[src="images/LOGO00.png"]');
-        if (footerLogo) {
-            footerLogo.src = "images/LOGO01.png";
-        }
-    }
-    
-    // Toggle theme when button is clicked
-    themeToggleBtn.addEventListener('click', () => {
-        // Check current theme
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        // Update the theme
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        // Update the icon
-        if (newTheme === 'light') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            
-            // Update footer logo
-            const footerLogo = document.querySelector('footer img[src="images/LOGO00.png"]');
-            if (footerLogo) {
-                footerLogo.src = "images/LOGO01.png";
-            }
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            
-            // Update footer logo
-            const footerLogo = document.querySelector('footer img[src="images/LOGO01.png"]');
-            if (footerLogo) {
-                footerLogo.src = "images/LOGO00.png";
-            }
-        }
-    });
-});
+
 

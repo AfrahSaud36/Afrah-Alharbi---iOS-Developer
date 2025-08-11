@@ -11,22 +11,10 @@
   --footer-bg: transparent;
   --box-shadow: 0px 10px 50px 5px rgba(26, 35, 126, 0.3);
   --card-shadow: 0px 5px 15px rgba(26, 35, 126, 0.3);
-  --toggle-icon: "\f185"; /* sun */
+
 }
 
-[data-theme="light"] {
-  --background-color: transparent;
-  --background-image: url("images/BB2.png");
-  --text-color: #333;
-  --heading-color: #1a237e; /* Navy blue for headings */
-  --card-bg: rgba(26, 35, 126, 0.1);
-  --card-hover-bg: rgba(26, 35, 126, 0.2);
-  --navbar-bg: transparent; /* Make navbar background transparent in light mode too */
-  --footer-bg: rgba(26, 35, 126, 0.1);
-  --box-shadow: 0px 10px 40px rgba(26, 35, 126, 0.1);
-  --card-shadow: 0 5px 15px rgba(26, 35, 126, 0.08);
-  --toggle-icon: "\f186"; /* moon */
-}
+
 
 * {
     box-sizing: border-box; /* Include padding and border in element's total width */
@@ -409,11 +397,7 @@ body {
     box-sizing: border-box;
 }
 
-[data-theme="light"] body {
-  background-image: var(--background-image);
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 
 /* Fix white background issue on mobile devices */
 @media (max-width: 768px) {
@@ -460,12 +444,7 @@ body {
         overflow-x: hidden;
     }
     
-    [data-theme="light"] body {
-        background-attachment: scroll !important;
-        background-position: center top;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-    }
+
 }
 
 .favicon {
@@ -535,27 +514,7 @@ body {
     backdrop-filter: blur(20px);
 }
 
-[data-theme="light"] .navbar.sticky {
-    background: rgba(255, 255, 255, 0.9);
-}
 
-[data-theme="light"] .navbar.sticky.navbar-visible {
-    background: rgba(255, 255, 255, 0.95);
-}
-
-[data-theme="light"] .navbar {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-[data-theme="light"] .navbar .menu li a {
-    font-weight: 600;
-    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-[data-theme="light"] .theme-toggle i {
-    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
-}
 
 .navbar.sticky {
     padding: 20px 0;
@@ -575,10 +534,7 @@ body {
     filter: blur(1.5px);
 }
 
-[data-theme="light"] .navbar.sticky::before {
-    background: var(--background-image) no-repeat center;
-    background-size: cover;
-}
+
 
 .navbar .max-width {
     display: flex;
@@ -1994,9 +1950,7 @@ section .title::after {
     transition: all 0.3s ease; /* Transition for button */
 }
 
-[data-theme="light"] .contact .right form .button button {
-    color: black; /* Black text for light mode */
-}
+
 
 .contact .right form .button button:hover {
     background: none; /* No background on hover */
@@ -3145,10 +3099,7 @@ footer i:hover {
     margin-bottom: 25px;
 }
 
-[data-theme="light"] .project-info p {
-    color: #000;
-    font-weight: 700;
-}
+
 
 .project-links {
     display: flex;
@@ -3314,36 +3265,7 @@ footer i:hover {
   color: var(--text-color);
 }
 
-[data-theme="light"] .project-type {
-    background: rgba(126, 34, 206, 0.8);
-    color: white;
-    font-weight: 600;
-}
 
-[data-theme="light"] .btn-project {
-    border: 2px solid #4ADEDD;
-    color: #4ADEDD;
-    background: transparent;
-}
-
-[data-theme="light"] .btn-project:hover {
-    background: rgba(74, 222, 221, 0.1);
-    color: #4ADEDD;
-}
-
-[data-theme="light"] .btn-demo {
-    background: transparent;
-    border: 2px solid #4ADEDD;
-    color: #4ADEDD;
-}
-
-[data-theme="light"] .btn-demo:hover {
-    background: rgba(74, 222, 221, 0.1);
-}
-
-[data-theme="light"] .logo img {
-  content: url("images/LOGO01.png");
-}
 
 h1, h2, h3, h4, h5, .text-2, .text-3, section .title {
     font-weight: 700; /* Extra bold for headings */
@@ -3744,7 +3666,7 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
 .achievement-details h4 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--heading-color);
+  color: #4ADEDD;
   margin-bottom: 10px;
   line-height: 1.4;
 }
