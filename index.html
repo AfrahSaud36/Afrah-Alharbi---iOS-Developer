@@ -1,14 +1,16 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   
   <title>Afrah Alharbi - iOS Developer</title>
 
-  <!-- AOS -->
+  <!-- AOS  -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   
@@ -70,6 +72,19 @@
 </head>
 
 <body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <img src="images/LOGO00.png" alt="Logo" class="loader-logo">
+      <p>Loading...</p>
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+  
+
+  
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
   
   <nav class="navbar">
     <div class="progress-container">
@@ -84,6 +99,7 @@
         <li><a href="#about" class="menu-btn">About</a></li>
         <li><a href="#experience" class="menu-btn">Experience</a></li>
         <li><a href="#education" class="menu-btn">Education</a></li>
+        <li><a href="#achievements" class="menu-btn">Achievements</a></li>
         <li><a href="#projects" class="menu-btn">Projects</a></li>
         <li><a href="#skills" class="menu-btn">Skills</a></li>
         <li><a href="#contact" class="menu-btn">Contact</a></li>
@@ -267,16 +283,66 @@
       </div>
     </div>
   </div>
-</section>
+  </section>
 
-<!-- Projects Section -->
+  <!-- Achievements Section -->
+  <section class="achievements" id="achievements">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down">My Achievements</h2>
+      <div class="achievements-content">
+        <!-- Leadership & Entrepreneurship -->
+        <div class="achievement-category" data-aos="fade-up">
+          <h3 class="category-title">
+            <i class="fas fa-crown"></i>
+            
+          </h3>
+          <div class="achievement-grid">
+            <div class="achievement-card" data-aos="zoom-in">
+              <div class="achievement-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="achievement-details">
+                <h4>Co-Founder & CTO - Shohna Plus</h4>
+                <p>AI-powered logistics platform connecting e-commerce with shipping companies</p>
+                <span class="achievement-badge">🏢 Co-Founder</span>
+              </div>
+            </div>
+            
+            <div class="achievement-card" data-aos="zoom-in">
+              <div class="achievement-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="achievement-details">
+                <h4>Tech Founders Program</h4>
+                <p>We have been selected among the top tech founders in Saudi Arabia by the Ministry of Communications and Information Technology program</p>
+                <span class="achievement-badge">⭐ Top Founder</span>
+              </div>
+            </div>
+            
+            <div class="achievement-card" data-aos="zoom-in">
+              <div class="achievement-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="achievement-details">
+                <h4>1K Mile Program Acceptance</h4>
+                <p>Shohna Plus selected for prestigious National Industrial Development and Logistics Program - 1K Mile entrepreneurial program</p>
+                <span class="achievement-badge">🚀 Selected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
 <section class="projects" id="projects">
     <div class="max-width">
       <h2 class="title" data-aos="fade-down">My Projects</h2>
 
     <div class="projects-container">
       <!-- Barq Project -->
-      <div class="project-card" data-aos="fade-up" style="margin-top: 2rem;">
+      <div class="project-card smooth-hover" data-aos="fade-up" style="margin-top: 2rem;">
         <div class="project-img">
           <img src="images/Barq.jpg" alt="Barq Wallet App">
           <div class="project-overlay">
@@ -296,7 +362,7 @@
         </div>
       </div>
       <!-- Sanam Project -->
-      <div class="project-card" data-aos="fade-up">
+      <div class="project-card smooth-hover" data-aos="fade-up">
         <div class="project-img">
           <img src="images/Sanam.jpg" alt="Sanam Game">
           <div class="project-overlay">
@@ -317,7 +383,7 @@
       </div>
 
       <!-- Wethaq Project -->
-      <div class="project-card" data-aos="fade-up" style="margin-top: 2rem;">
+      <div class="project-card smooth-hover" data-aos="fade-up" style="margin-top: 2rem;">
         <div class="project-img">
           <img src="images/WETHAQQ.png" alt="Wethaq App">
           <div class="project-overlay">
@@ -338,7 +404,7 @@
       </div>
 
       <!-- Shohna Project -->
-      <div class="project-card" data-aos="fade-up" style="margin-top: 2rem;">
+      <div class="project-card smooth-hover" data-aos="fade-up" style="margin-top: 2rem;">
         <div class="project-img">
           <img src="images/shohna.png" alt="Shohna App">
           <div class="project-overlay">
@@ -359,7 +425,7 @@
       </div>
 
             <!-- Hydrate 💧 -->
-            <div class="project-card" data-aos="fade-up" style="margin-top: 2rem;">
+            <div class="project-card smooth-hover" data-aos="fade-up" style="margin-top: 2rem;">
               <div class="project-img">
                 <img src="images/Hydrate.png" alt="Hydrate App">
                 <div class="project-overlay">
@@ -380,7 +446,7 @@
       </div>
 
       <!-- Face Detection Project -->
-      <div class="project-card" id="face-detection-project" data-aos="fade-up">
+      <div class="project-card smooth-hover" id="face-detection-project" data-aos="fade-up">
         <div class="project-img">
           <img src="images/P1.png" alt="Face Detection & Recognition System">
           <div class="project-overlay">
@@ -404,7 +470,7 @@
       </div>
 
       <!-- Pong Game Project -->
-      <div class="project-card" data-aos="fade-up">
+      <div class="project-card smooth-hover" data-aos="fade-up">
         <div class="project-img">
           <img src="images/P2.png" alt="Pong Game Project">
           <div class="project-overlay">
@@ -703,19 +769,226 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  
+  <!-- Enhanced Animation Scripts -->
   <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {myFunction()};
+    // Modern Page Loading Animation
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('pageLoader');
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 800);
+      }, 1000);
+    });
+
+    // Enhanced Scroll Progress Bar
+    window.onscroll = function() {
+      updateProgressBar();
+      handleStickyNavbar(); // Add sticky navbar functionality back
+      handleNavbarScroll();
+      revealSections();
+    };
     
-    function myFunction() {
+    function updateProgressBar() {
       var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
     }
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init({easing : 'ease-in',delay: 100,duration: 300,offset:100});window.addEventListener('load', AOS.refresh);</script>
+
+    // Sticky Navbar Function
+    function handleStickyNavbar() {
+      const navbar = document.querySelector('.navbar');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 50) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+
+    // Smart Navbar Hide/Show on Scroll
+    let lastScrollTop = 0;
+    function handleNavbarScroll() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const navbar = document.querySelector('.navbar');
+      
+      // Only hide/show navbar if user has scrolled enough
+      if (scrollTop > 200) {
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down - hide navbar
+          navbar.classList.add('navbar-hidden');
+          navbar.classList.remove('navbar-visible');
+        } else {
+          // Scrolling up - show navbar
+          navbar.classList.remove('navbar-hidden');
+          navbar.classList.add('navbar-visible');
+        }
+      } else {
+        // Always show navbar when near top
+        navbar.classList.remove('navbar-hidden');
+        navbar.classList.remove('navbar-visible'); // Let default styles show
+      }
+      lastScrollTop = scrollTop;
+    }
+
+    // Smooth Section Reveals
+    function revealSections() {
+      const sections = document.querySelectorAll('section');
+      const triggerBottom = window.innerHeight / 5 * 4;
+      
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add('section-reveal', 'revealed');
+        }
+      });
+    }
+
+    // Enhanced Touch Interactions for Mobile
+    function addTouchInteractions() {
+      const cards = document.querySelectorAll('.project-card, .skill-category, .timeline-content');
+      
+      cards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+          this.style.transform = 'scale(0.98)';
+        });
+        
+        card.addEventListener('touchend', function() {
+          this.style.transform = '';
+        });
+      });
+    }
+
+    // Parallax Effect for Background (disabled on desktop to prevent white background)
+    function addParallaxEffect() {
+      // Only enable parallax on mobile devices to prevent white background issues on desktop
+      if (window.innerWidth <= 768) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          const parallax = document.querySelector('body');
+          const speed = scrolled * 0.3; // Reduced speed for better performance
+          parallax.style.backgroundPosition = `center ${speed}px`;
+        });
+      }
+    }
+
+    // Smooth Scroll for Navigation Links
+    function addSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+
+    // Initialize Modern Animations
+    document.addEventListener('DOMContentLoaded', function() {
+      addTouchInteractions();
+      addParallaxEffect();
+      addSmoothScrolling();
+      
+      // Ensure navbar is visible on load
+      const navbar = document.querySelector('.navbar');
+      navbar.style.opacity = '1';
+      navbar.style.visibility = 'visible';
+      navbar.style.transform = 'translateY(0)';
+      
+      // Add reveal class to sections
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('section-reveal');
+      });
+      
+      // Trigger initial reveal check
+      revealSections();
+      
+      // Initialize scroll indicator
+      const scrollIndicator = document.getElementById('scrollIndicator');
+      if (window.scrollY === 0) {
+        scrollIndicator.classList.add('visible');
+      }
+      
+      // Hide scroll indicator when user starts scrolling
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          scrollIndicator.classList.remove('visible');
+        }
+      });
+    });
+
+    // Enhanced Mobile Menu Animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.querySelector('.menu-btn');
+      const menu = document.querySelector('.menu');
+      
+      if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function() {
+          menu.classList.toggle('active');
+          
+          // Add smooth animation for mobile menu
+          if (menu.classList.contains('active')) {
+            menu.style.animation = 'slideInFromTop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          } else {
+            menu.style.animation = 'slideOutToTop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Enhanced AOS Initialization -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-out-cubic',
+      duration: 800,
+      delay: 100,
+      offset: 50,
+      once: false,
+      mirror: true,
+      anchorPlacement: 'top-bottom'
+    });
+    
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+  </script>
+
+  <!-- Mobile Menu Animation Styles -->
+  <style>
+    @keyframes slideInFromTop {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideOutToTop {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+  </style>
 </body>
 
 </html>
+
