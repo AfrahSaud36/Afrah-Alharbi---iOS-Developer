@@ -3470,3 +3470,385 @@ p, .paragraph, .paragraph-2, .paragraph-3, .skill-item span, .timeline-content p
     filter: brightness(1.3) contrast(1.1);
     box-shadow: 0 10px 20px rgba(74, 222, 221, 0.3);
 }
+
+/* Global Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Ensure all text is readable on mobile */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Reduce navbar height on mobile */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    /* Optimize scroll button for mobile */
+    #btnScrollToTop {
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    /* Ensure footer is compact on mobile */
+    footer {
+        padding: 15px 10px;
+        font-size: 11px;
+    }
+    
+    footer .text-center {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller text for small phones */
+    body {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    /* Compact navbar for small phones */
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    /* Smaller scroll button for small phones */
+    #btnScrollToTop {
+        width: 35px;
+        height: 35px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    /* Compact footer for small phones */
+    footer {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+    
+    footer .text-center {
+        font-size: 10px;
+    }
+    
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Enhanced Mobile Touch Interactions */
+@media (max-width: 768px) {
+    /* Improve touch target sizes */
+    .navbar .menu li a,
+    .btn-project,
+    .icons a,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Add touch feedback */
+    .project-card,
+    .skill-category,
+    .timeline-content,
+    .education-card {
+        -webkit-tap-highlight-color: rgba(74, 222, 221, 0.2);
+        tap-highlight-color: rgba(74, 222, 221, 0.2);
+    }
+    
+    /* Smooth touch scrolling */
+    body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Enhanced button interactions */
+    .btn-project,
+    .download-resume,
+    #btnScrollToTop {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+    
+    .btn-project:active,
+    .download-resume:active {
+        transform: scale(0.95);
+    }
+}
+
+
+
+/* Smooth Text Animations */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid #4ADEDD;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4ADEDD }
+}
+
+/* Enhanced Scroll Indicators */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+}
+
+.scroll-indicator::before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, #4ADEDD);
+    display: block;
+    margin: 0 auto 10px;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        height: 10px;
+        opacity: 0;
+    }
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 10px;
+        opacity: 0;
+    }
+}
+
+/* Achievements Section */
+.achievements {
+  padding: 80px 0;
+  background: var(--section-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.achievement-category {
+  margin-bottom: 60px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.category-title i {
+  color: #4ADEDD;
+  font-size: 2.2rem;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.achievement-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74, 222, 221, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.achievement-card:hover::before {
+  left: 100%;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  border-color: #4ADEDD;
+  box-shadow: var(--card-shadow);
+  background: var(--card-hover-bg);
+}
+
+.achievement-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4ADEDD, #1a237e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(74, 222, 221, 0.3);
+}
+
+.achievement-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.achievement-details h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.achievement-details p {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.achievement-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #4ADEDD, #1a237e);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(74, 222, 221, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-badge {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(74, 222, 221, 0.4);
+}
+
+/* Responsive Design for Achievements */
+@media (max-width: 1024px) {
+  .achievement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .category-title {
+    font-size: 1.8rem;
+  }
+  
+  .achievement-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements {
+    padding: 60px 0;
+  }
+  
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .category-title {
+    font-size: 1.6rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .achievement-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .achievement-icon i {
+    font-size: 1.8rem;
+  }
+  
+  .achievement-details h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements {
+    padding: 50px 0;
+  }
+  
+  .achievement-card {
+    padding: 20px;
+  }
+  
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .achievement-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .achievement-details h4 {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-details p {
+    font-size: 0.9rem;
+  }
+  
+  .achievement-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
