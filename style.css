@@ -385,29 +385,26 @@ html {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
-
 body {
-    background: var(--background);
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: var(--background);  /* استخدام خلفية مخصصة */
+    background-size: cover;         /* تأكد من أن الخلفية تغطي الصفحة بالكامل */
+    background-attachment: scroll;  /* اجعل الخلفية غير ثابتة أثناء التمرير */
+    overflow-x: hidden;             /* منع التمرير الأفقي */
     font-weight: bold;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100vw;               /* منع تجاوز عرض الصفحة */
     box-sizing: border-box;
 }
 
-
-
-/* Fix white background issue on mobile devices */
+/* استبدال خاصية الخلفية للتأكد من عدم حدوث تغييرات غير مرغوب فيها أثناء التمرير */
 @media (max-width: 768px) {
     body {
-        background-attachment: scroll !important;
-        background-position: center top;
-        background-repeat: no-repeat;
-        min-height: 100vh;
+        background-attachment: scroll !important;  /* اجعل الخلفية ثابتة أثناء التمرير في الشاشات الصغيرة */
+        background-position: center top;           /* تأكد من أن الخلفية في منتصف الصفحة */
+        background-repeat: no-repeat;             /* منع تكرار الخلفية */
+        min-height: 100vh;                         /* تأكد من أن الصفحة تغطي كامل الشاشة */
         width: 100%;
-        max-width: 100vw;
+        max-width: 100vw;                         /* منع تجاوز عرض الصفحة */
     }
     
     /* Ensure all content fits mobile */
