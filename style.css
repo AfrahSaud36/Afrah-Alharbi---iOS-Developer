@@ -389,6 +389,7 @@ html {
 body {
     background: var(--background);
     background-size: cover;
+    background-attachment: fixed;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-weight: bold;
     width: 100%;
