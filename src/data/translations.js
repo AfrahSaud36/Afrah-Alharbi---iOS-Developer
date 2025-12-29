@@ -145,26 +145,49 @@ export const translations = {
         },
         achievements: {
             title: "My Achievements",
+            viewDetails: "View Details",
             items: [
                 {
-                    title: "Tech Founders Program",
-                    description: "Selected among the top tech founders in Saudi Arabia by the Ministry of Communications and Information Technology.",
-                    badge: "Top Founder"
+                    title: "Apple Developer Academy Scholarship ",
+                    description: "Accepted into a competitive scholarship and intensive training program at the Apple Developer Academy (TUWAIQ) to master iOS development and UI/UX design.",
+                    badge: "Scholarship Recipient",
+                    date: "Sep 2024",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_appleacademy-tuwaiq-ios-activity-7235905102627106816-XkMo"
                 },
                 {
-                    title: "NASA Space Apps Hackathon",
-                    description: "First Place Winner - Communications, Space & Technology Commission.",
-                    badge: "NASA Winner"
+                    title: "Misk Initiatives Incubator",
+                    description: "Our initiative was selected among the top 12 out of 600 applicants to graduate from the Misk Initiatives Incubator (Tech Pioneers Initiative).",
+                    badge: "Top 12 of 600",
+                    date: "Dec 2025",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_%D9%85%D9%86-%D8%AD%D8%A7%D8%B6%D9%86%D8%A9-%D9%85%D8%B3%D9%83-%D9%84%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA-%D9%86%D8%A8%D8%AF%D8%A3-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D9%81%D8%B5%D9%84%D8%A7-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A7-activity-7409835664260677632-UdFF"
                 },
                 {
                     title: "1K Mile Entrepreneurship Program",
-                    description: "Shohna Plus won 2nd place in the 1K Mile Program supervised by NIDLP, receiving ministerial recognition and 250,000 SAR in funding.",
-                    badge: "2nd Place"
+                    description: "Shohna Plus won 2nd place in the 1K Mile Program supervised by NIDLP, receiving ministerial recognition and a 250,000 SAR financial grant.",
+                    badge: "🥈 2nd Place",
+                    date: "Oct 2024",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_aeqaezaeuaepaetaeuabraepaesaepabraetaeyaes-activity-7367940658306633729-mnB7"
                 },
                 {
                     title: "Saudi Global Exhibition (SGiE)",
-                    description: "Awarded the Silver Medal at the Saudi Global Exhibition for Inventions & Innovations. (Nov 2025)",
-                    badge: "Silver Medal"
+                    description: "Awarded the Silver Medal at the Saudi Global Exhibition for Inventions & Innovations.",
+                    badge: "🥈 Silver Medal",
+                    date: "Nov 2025",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_i-am-proud-to-have-won-the-silver-medal-at-activity-7396526158445662208-Hb4w"
+                },
+                {
+                    title: "NASA Space Apps Hackathon",
+                    description: "First Place Winner - Communications, Space & Technology Commission and NASA.",
+                    badge: "🥇 First Place",
+                    date: "Oct 2023",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_aeuaepaetaehaerabraepaesaeqaedaeyaet-aesaevaexaeyabraesaefaeqaeyaeqaepaesabraepaesaepaeeaepaej-activity-7131317158311014402-dgXx"
+                },
+                {
+                    title: "Tech Founders Program",
+                    description: "Our startup was selected among the top tech startups in Saudi Arabia and joined the Tech Founders program by the Ministry of Communications and Information Technology.",
+                    badge: "Top Founder",
+                    date: "Aug 2025",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_techfounders-mcit-activity-7363572956280549377-T_EN"
                 }
             ]
         },
@@ -194,7 +217,7 @@ export const translations = {
                 },
                 {
                     title: "Development Expertise",
-                    skills: ["iOS App Development", "OOP", "Software Testing", "Database Management", "Debugging"]
+                    skills: ["iOS App Development", "Software Testing", "Database Management", "Debugging"]
                 },
                 {
                     title: "Soft Skills",
@@ -368,26 +391,49 @@ export const translations = {
         },
         achievements: {
             title: "إنجازاتي",
+            viewDetails: "عرض التفاصيل",
             items: [
                 {
-                    title: "برنامج رواد التقنية",
-                    description: "تم اختياري ضمن أفضل المؤسسين التقنيين في المملكة العربية السعودية من قبل وزارة الاتصالات وتقنية المعلومات.",
-                    badge: "أفضل مؤسس"
+                    title: "منحة أكاديمية أبل للمطورين ",
+                    description: "القبول في منحة ريادية وتدريبية مكثفة في أكاديمية شركة أبل للمطورين (Apple Developer Academy | TUWAIQ) لتطوير مهارات البرمجة والتصميم.",
+                    badge: "مقبول في المنحة",
+                    date: "سبتمبر ٢٠٢٤",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_appleacademy-tuwaiq-ios-activity-7235905102627106816-XkMo"
                 },
                 {
-                    title: "هاكاثون تطبيقات الفضاء من ناسا",
-                    description: "الحائز على المركز الأول - هيئة الاتصالات والفضاء والتقنية.",
-                    badge: "فائز ناسا"
+                    title: "حاضنة مسك للمبادرات",
+                    description: "تم اختيار مبادرتنا ضمن أفضل ١٢ مبادرة من أصل ٦٠٠ متقدم للتخرج من حاضنة مسك للمبادرات (مبادرة رواد التقنية).",
+                    badge: "أفضل ١٢ من أصل ٦٠٠",
+                    date: "ديسمبر ٢٠٢٥",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_%D9%85%D9%86-%D8%AD%D8%A7%D8%B6%D9%86%D8%A9-%D9%85%D8%B3%D9%83-%D9%84%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA-%D9%86%D8%A8%D8%AF%D8%A3-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D9%81%D8%B5%D9%84%D8%A7-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A7-activity-7409835664260677632-UdFF"
                 },
                 {
                     title: "برنامج ألف ميل لريادة الأعمال",
-                    description: "حصول 'شحنة بلس' على المركز الثاني في برنامج 'ألف ميل' بإشراف (ندلب) ودعم وزاري، مع تمويل استثماري بقيمة 250,000 ريال.",
-                    badge: "المركز الثاني"
+                    description: "حصول 'شحنة بلس' على المركز الثاني في برنامج 'ألف ميل' بإشراف (ندلب) ودعم وزاري، مع منحة مالية بقيمة 250,000 ريال.",
+                    badge: "🥈 المركز الثاني",
+                    date: "أكتوبر ٢٠٢٤",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_aeqaezaeuaepaetaeuabraepaesaepabraetaeyaes-activity-7367940658306633729-mnB7"
                 },
                 {
                     title: "المعرض السعودي الدولي (SGiE)",
-                    description: "الحصول على الميدالية الفضية في المعرض السعودي الدولي للاختراع والابتكار. (نوفمبر 2025)",
-                    badge: "ميدالية فضية"
+                    description: "الحصول على الميدالية الفضية في المعرض السعودي الدولي للاختراع والابتكار.",
+                    badge: "🥈 ميدالية فضية",
+                    date: "نوفمبر ٢٠٢٥",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_i-am-proud-to-have-won-the-silver-medal-at-activity-7396526158445662208-Hb4w"
+                },
+                {
+                    title: "هاكاثون تطبيقات الفضاء من ناسا",
+                    description: "الحائز على المركز الأول - هيئة الاتصالات والفضاء والتقنية ووكالة ناسا الفضائية.",
+                    badge: "🥇 المركز الأول",
+                    date: "أكتوبر ٢٠٢٣",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_aeuaepaetaehaerabraepaesaeqaedaeyaet-aesaevaexaeyabraesaefaeqaeyaeqaepaesabraepaesaepaeeaepaej-activity-7131317158311014402-dgXx"
+                },
+                {
+                    title: "برنامج رواد التقنية",
+                    description: "تم اختيار شركتنا الناشئة ضمن أفضل الشركات التقنية الناشئة في المملكة والانضمام لبرنامج رواد التقنية من قبل وزارة الاتصالات وتقنية المعلومات.",
+                    badge: "أفضل مؤسس",
+                    date: "أغسطس ٢٠٢٥",
+                    link: "https://www.linkedin.com/posts/afrah-alharbi36_techfounders-mcit-activity-7363572956280549377-T_EN"
                 }
             ]
         },
@@ -417,7 +463,7 @@ export const translations = {
                 },
                 {
                     title: "خبرات تطويرية",
-                    skills: ["iOS App Development", "OOP", "Software Testing", "Database Management", "Debugging"]
+                    skills: ["iOS App Development", "Software Testing", "Database Management", "Debugging"]
                 },
                 {
                     title: "المهارات الشخصية",

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Trophy, Star, Medal } from 'lucide-react';
+import { Award, Trophy, Star, Medal, ExternalLink, Calendar } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
 const Achievements = () => {
@@ -45,16 +45,38 @@ const Achievements = () => {
                         >
                             <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full transition-all group-hover:bg-primary/20"></div>
 
-                            <div className="mb-6 w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                {getIcon(index)}
+                            <div className="flex justify-between items-start w-full mb-6 relative z-10">
+                                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                    {getIcon(index)}
+                                </div>
+                                {achievement.date && (
+                                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-primary/80 bg-primary/10 px-2.5 py-1 rounded-full border border-primary/20 backdrop-blur-sm shadow-sm">
+                                        <Calendar size={10} />
+                                        <span className="uppercase tracking-wider">{achievement.date}</span>
+                                    </div>
+                                )}
                             </div>
 
-                            <h3 className="text-lg font-bold text-white mb-3">{achievement.title}</h3>
+                            <h3 className="text-lg font-bold text-white mb-3 text-center">{achievement.title}</h3>
                             <p className="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">{achievement.description}</p>
 
-                            <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full border border-primary/30 mt-auto">
-                                {achievement.badge}
-                            </span>
+                            <div className="flex flex-col gap-4 w-full mt-auto">
+                                <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full border border-primary/30 text-center">
+                                    {achievement.badge}
+                                </span>
+
+                                {achievement.link && (
+                                    <a
+                                        href={achievement.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-medium rounded-xl border border-white/10 transition-all group/btn"
+                                    >
+                                        <span>{t.achievements.viewDetails}</span>
+                                        <ExternalLink size={14} className="transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                                    </a>
+                                )}
+                            </div>
                         </motion.div>
                     ))}
                 </div>
