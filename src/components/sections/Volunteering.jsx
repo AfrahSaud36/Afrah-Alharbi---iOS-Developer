@@ -25,7 +25,7 @@ const Volunteering = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
+                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
                 >
                     {t.volunteering.title}
                 </motion.h2>
@@ -50,7 +50,7 @@ const Volunteering = () => {
                                         <img src={image} alt={item.organization} className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
                                     </div>
-                                    <div className="p-6 md:w-3/5 flex flex-col justify-center">
+                                    <div className="p-4 md:p-6 md:w-3/5 flex flex-col justify-center">
                                         <div className="flex items-center gap-2 mb-2">
                                             {getIcon(index)}
                                             <span className="text-sm font-bold text-gray-400 uppercase tracking-wider">{item.organization}</span>
@@ -71,7 +71,7 @@ const Volunteering = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-dark rounded-3xl overflow-hidden shadow-xl border border-gray-800 p-6 flex flex-col justify-center md:col-span-2 lg:col-span-1"
+                                className="bg-dark rounded-3xl overflow-hidden shadow-xl border border-gray-800 p-4 md:p-6 flex flex-col justify-center md:col-span-2 lg:col-span-1"
                             >
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-primary">

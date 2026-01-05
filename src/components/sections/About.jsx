@@ -11,13 +11,13 @@ const About = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
+                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
                 >
                     {t.about.title}
                 </motion.h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +27,7 @@ const About = () => {
                     <img
                         src="/images/about.png"
                         alt="About Me"
-                        className="rounded-2xl shadow-2xl w-full max-w-md mx-auto hover:grayscale-0 transition-all duration-500"
+                        className="rounded-2xl shadow-2xl w-full max-w-xs md:max-w-md mx-auto hover:grayscale-0 transition-all duration-500"
                     />
                 </motion.div>
 
@@ -36,9 +36,10 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-center md:text-left"
                 >
-                    <h3 className="text-2xl font-bold mb-4">{t.about.im} <span className="text-primary">Afrah Alharbi</span></h3>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-8 text-justify">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4">{t.about.im} <span className="text-primary">Afrah Alharbi</span></h3>
+                    <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-8 text-center md:text-justify">
                         {language === 'ar' ? (
                             <>
                                 خريجة <span className="text-primary font-bold">علوم حاسب</span> ومطورة برمجيات متخصصة في تطوير تطبيقات <span className="text-primary font-bold">iOS</span>.

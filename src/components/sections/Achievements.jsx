@@ -24,7 +24,7 @@ const Achievements = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
+                        className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
                     >
                         {t.achievements.title}
                     </motion.h2>
@@ -41,7 +41,7 @@ const Achievements = () => {
                             whileHover={{ scale: 1.05 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
-                            className="bg-dark p-6 rounded-3xl border border-gray-800 shadow-xl relative overflow-hidden group flex flex-col items-center text-center h-full"
+                            className="bg-dark p-4 md:p-6 rounded-3xl border border-gray-800 shadow-xl relative overflow-hidden group flex flex-col items-center text-center h-full"
                         >
                             <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full transition-all group-hover:bg-primary/20"></div>
 

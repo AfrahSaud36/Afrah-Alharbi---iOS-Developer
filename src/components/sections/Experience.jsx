@@ -35,7 +35,7 @@ const Experience = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
+                        className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
                     >
                         {t.experience.title}
                     </motion.h2>
@@ -59,15 +59,15 @@ const Experience = () => {
 
                             <div className="md:w-1/2 p-4"></div> {/* Spacer */}
 
-                            <div className="md:w-1/2 p-4 pl-8 md:pl-8 md:pr-4">
-                                <div className="bg-dark p-6 rounded-2xl shadow-xl hover:shadow-primary/20 transition-all border border-gray-800 hover:border-primary/50 group">
+                            <div className="md:w-1/2 p-4 pl-6 md:pl-8 md:pr-4">
+                                <div className="bg-dark p-4 md:p-6 rounded-2xl shadow-xl hover:shadow-primary/20 transition-all border border-gray-800 hover:border-primary/50 group">
                                     <div className="flex items-center gap-4 mb-4">
-                                        <div className="w-20 h-20 rounded-full overflow-hidden bg-white flex-shrink-0 flex items-center justify-center border-2 border-primary/20">
+                                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white flex-shrink-0 flex items-center justify-center border-2 border-primary/20">
                                             <img src={exp.image} alt={exp.company} className="w-full h-full object-cover" />
                                         </div>
                                         <div>
                                             <span className="text-primary text-sm font-bold uppercase tracking-wider">{exp.type}</span>
-                                            <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                                            <h3 className="text-lg md:text-xl font-bold text-white">{exp.role}</h3>
                                             <h4 className="text-gray-400 text-sm">{exp.company}</h4>
                                             <h5 className="text-gray-500 text-xs italic">{exp.period}</h5>
                                         </div>

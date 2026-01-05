@@ -12,7 +12,7 @@ const Skills = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
+                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block border-b-4 border-primary pb-2"
                 >
                     {t.skills.title}
                 </motion.h2>
@@ -27,7 +27,7 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-dark p-6 rounded-2xl border border-gray-800 hover:border-primary/50 transition-colors"
+                            className="bg-dark p-4 md:p-6 rounded-2xl border border-gray-800 hover:border-primary/50 transition-colors"
                         >
                             <h3 className="text-xl font-bold text-white mb-4 border-l-4 border-primary pl-3">{category.title}</h3>
                             <div className="flex flex-wrap gap-2">
