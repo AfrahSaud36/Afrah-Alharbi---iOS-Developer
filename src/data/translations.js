@@ -83,6 +83,12 @@ export const translations = {
             viewProject: "View Project",
             items: [
                 {
+                    title: "Shohna Plus",
+                    description: "Led end-to-end technical architecture and development of an enterprise-grade logistics platform connecting e-commerce businesses with shipping providers. Built with Swift and SwiftUI using Apple's latest frameworks and design principles, ensuring seamless performance and exceptional user experience across iOS devices.",
+                    image: "/images/shohna.png",
+                    type: "iOS App"
+                },
+                {
                     title: "UI/UX Enhancement for Barq Wallet",
                     description: "Improved Barq Wallet's UI/UX by simplifying the transfer process and reducing unnecessary screens. Added AI-powered tools for budget management and spending tracking.",
                     image: "/images/Barq.jpg",
@@ -148,6 +154,13 @@ export const translations = {
             viewDetails: "View Details",
             items: [
                 {
+                    title: "MVPLAB",
+                    description: "Selected for the MVPLAB program by the National Technology Development Program (NTDP), designed to empower technology entrepreneurs and accelerate the development of Minimum Viable Products (MVPs).",
+                    badge: "MVPLAB",
+                    date: "2024",
+                    link: "https://ntdp.gov.sa/"
+                },
+                {
                     title: "Apple Developer Academy Scholarship ",
                     description: "Accepted into a competitive scholarship and intensive training program at the Apple Developer Academy (TUWAIQ) to master iOS development and UI/UX design.",
                     badge: "Scholarship Recipient",
@@ -177,7 +190,7 @@ export const translations = {
                 },
                 {
                     title: "NASA Space Apps Hackathon",
-                    description: "First Place Winner - Communications, Space & Technology Commission and NASA.",
+                    description: "First Place Winner in the Space Apps Challenge (NASA & CST partnership) for the 'AI-powered Fire Detection System' project.",
                     badge: "🥇 First Place",
                     date: "Oct 2023",
                     link: "https://www.linkedin.com/posts/afrah-alharbi36_aeuaepaetaehaerabraepaesaeqaedaeyaet-aesaevaexaeyabraesaefaeqaeyaeqaepaesabraepaesaepaeeaepaej-activity-7131317158311014402-dgXx"
@@ -258,10 +271,10 @@ export const translations = {
             hello: "أهلاً، اسمي",
             im: "وأنا",
             roles: [
-                "مطور تطبيقات iOS",
-                "مطور برمجيات",
-                "مصمم واجهة وتجربة مستخدم",
-                "رائد أعمال"
+                "مطورة تطبيقات iOS",
+                "مطورة برمجيات",
+                "مصممة واجهة وتجربة مستخدم",
+                "رائدة أعمال"
             ],
             desc: "أبني تطبيقات iOS مبتكرة تدمج الذكاء الاصطناعي بجماليات التصميم، وأقود حلولاً ريادية تحول الرؤى التقنية إلى واقع ملموس."
         },
@@ -286,7 +299,7 @@ export const translations = {
         experience: {
             title: "خبراتي",
             apple: {
-                role: "مطور iOS ومصمم UI/UX",
+                role: "مطورة iOS ومصممة UI/UX",
                 company: "أكاديمية مطوري أبل | طويق",
                 type: "تطوير iOS",
                 details: [
@@ -309,17 +322,16 @@ export const translations = {
                 type: "شركة ناشئة",
                 details: [
                     "تأسيس وقيادة التطوير التقني لمنصة لوجستية تربط التجارة الإلكترونية بشركات الشحن.",
-                    "الفوز بالمركز الثاني في مسابقة القطاع اللوجستي، وتكريم من عدة وزراء والحصول على دعم استثماري بقيمة 250 ألف ريال.",
+                    "الفوز بالمركز الثاني في مسابقة القطاع اللوجستي، وتكريم من عدة وزراء والحصول على منحة مالية بقيمة 250 ألف ريال.",
                     "هندسة حلول تقنية قابلة للتوسع وقيادة تطوير المنتج من الفكرة إلى منصة جاهزة للسوق."
                 ]
             },
             nidlp: {
-                role: "رائد أعمال وقائد تقني",
+                role: "رائدة أعمال وقائدة تقنية",
                 company: "برنامج الألف ميل | ندلب",
                 type: "ريادة أعمال",
                 details: [
                     "قيادة رؤية المنتج واستراتيجية العمل مع هندسة البنية التقنية الكاملة لشركتنا الناشئة ضمن برنامج الألف ميل.",
-                    "قيادة فرق متعددة الوظائف (تصميم، تطوير، تسويق) لتقديم حلول تركز على المستخدم وتتوافق مع احتياجات السوق.",
                     "تطبيق أحدث التقنيات لتسريع تطوير النموذج الأولي وضمان القابلية للتوسع."
                 ]
             }
@@ -328,6 +340,12 @@ export const translations = {
             title: "مشاريعي",
             viewProject: "عاين المشروع",
             items: [
+                {
+                    title: "شحنة بلس",
+                    description: "قيادة الهندسة المعمارية التقنية الشاملة وتطوير منصة لوجستية احترافية تربط أعمال التجارة الإلكترونية بمزودي خدمات الشحن. تم بناؤها باستخدام Swift و SwiftUI مع أحدث تقنيات وأدوات أبل ومبادئ التصميم، لضمان أداء سلس وتجربة مستخدم استثنائية عبر أجهزة iOS.",
+                    image: "/images/shohna.png",
+                    type: "تطبيق iOS"
+                },
                 {
                     title: "تحسين واجهة وتجربة المستخدم لمحفظة برق",
                     description: "تحسين واجهة وتجربة المستخدم لمحفظة برق من خلال تبسيط عملية التحويل وتقليل الشاشات غير الضرورية. إضافة أدوات مدعومة بالذكاء الاصطناعي لإدارة الميزانية وتتبع الإنفاق.",
@@ -394,6 +412,13 @@ export const translations = {
             viewDetails: "عرض التفاصيل",
             items: [
                 {
+                    title: "MVPLAB",
+                    description: "تم اختياري في برنامج MVPLAB من البرنامج الوطني لتنمية قطاع تقنية المعلومات (NTDP) لدعم رواد الأعمال التقنيين وتسريع تطوير النماذج الأولية للمنتجات.",
+                    badge: "MVPLAB",
+                    date: "٢٠٢٤",
+                    link: "https://ntdp.gov.sa/"
+                },
+                {
                     title: "منحة أكاديمية أبل للمطورين ",
                     description: "القبول في منحة ريادية وتدريبية مكثفة في أكاديمية شركة أبل للمطورين (Apple Developer Academy | TUWAIQ) لتطوير مهارات البرمجة والتصميم.",
                     badge: "مقبول في المنحة",
@@ -423,7 +448,7 @@ export const translations = {
                 },
                 {
                     title: "هاكاثون تطبيقات الفضاء من ناسا",
-                    description: "الحائز على المركز الأول - هيئة الاتصالات والفضاء والتقنية ووكالة ناسا الفضائية.",
+                    description: "المركز الأول في هاكاثون تحدي تطبيقات الفضاء (بشراكة بين ناسا وهيئة الاتصالات) عن مشروع 'نظام كشف الحرائق بالذكاء الاصطناعي'.",
                     badge: "🥇 المركز الأول",
                     date: "أكتوبر ٢٠٢٣",
                     link: "https://www.linkedin.com/posts/afrah-alharbi36_aeuaepaetaehaerabraepaesaeqaedaeyaet-aesaevaexaeyabraesaefaeqaeyaeqaepaesabraepaesaepaeeaepaej-activity-7131317158311014402-dgXx"

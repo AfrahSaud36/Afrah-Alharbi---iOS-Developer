@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Download, AppWindow } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import { useState } from 'react';
 
 const Projects = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const [expandedProjects, setExpandedProjects] = useState({});
 
     const projects = t.projects.items;
+
+    const toggleExpanded = (index) => {
+        setExpandedProjects(prev => ({
+            ...prev,
+            [index]: !prev[index]
+        }));
+    };
 
     return (
         <section id="projects" className="py-20">
@@ -37,7 +46,20 @@ const Projects = () => {
                             </div>
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
+                                <p className={`text-gray-400 text-sm mb-2 ${expandedProjects[index] ? '' : 'line-clamp-3'}`}>
+                                    {project.description}
+                                </p>
+                                {project.description && project.description.length > 150 && (
+                                    <button
+                                        onClick={() => toggleExpanded(index)}
+                                        className="text-primary text-sm hover:underline mb-4"
+                                    >
+                                        {expandedProjects[index]
+                                            ? (language === 'ar' ? 'عرض أقل' : 'Read Less')
+                                            : (language === 'ar' ? 'اقرأ المزيد' : 'Read More')
+                                        }
+                                    </button>
+                                )}
 
                                 <div className="flex flex-wrap gap-3 mb-4">
                                     {project.links && project.links.map((link, i) => (
