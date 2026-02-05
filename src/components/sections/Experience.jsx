@@ -17,7 +17,7 @@ const Experience = () => {
         },
         {
             ...t.experience.shohna,
-            period: "2024 – Present",
+            period: "2025 – Present",
             image: "/images/winshohna.png"
         },
         {

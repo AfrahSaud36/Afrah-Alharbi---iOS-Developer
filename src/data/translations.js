@@ -157,11 +157,11 @@ export const translations = {
                     title: "MVPLAB",
                     description: "Selected for the MVPLAB program by the National Technology Development Program (NTDP), designed to empower technology entrepreneurs and accelerate the development of Minimum Viable Products (MVPs).",
                     badge: "MVPLAB",
-                    date: "2024",
+                    date: "2025",
                     link: "https://ntdp.gov.sa/"
                 },
                 {
-                    title: "Apple Developer Academy Scholarship ",
+                    title: "Apple Developer Academy Scholarship",
                     description: "Accepted into a competitive scholarship and intensive training program at the Apple Developer Academy (TUWAIQ) to master iOS development and UI/UX design.",
                     badge: "Scholarship Recipient",
                     date: "Sep 2024",
@@ -178,7 +178,7 @@ export const translations = {
                     title: "1K Mile Entrepreneurship Program",
                     description: "Shohna Plus won 2nd place in the 1K Mile Program supervised by NIDLP, receiving ministerial recognition and a 250,000 SAR financial grant.",
                     badge: "🥈 2nd Place",
-                    date: "Oct 2024",
+                    date: "Oct 2025",
                     link: "https://www.linkedin.com/posts/afrah-alharbi36_aeqaezaeuaepaetaeuabraepaesaepabraetaeyaes-activity-7367940658306633729-mnB7"
                 },
                 {
@@ -304,7 +304,8 @@ export const translations = {
                 type: "تطوير iOS",
                 details: [
                     "تطوير تطبيقات iOS باستخدام Swift و SwiftUI، مع الالتزام بمعايير تصميم أبل.",
-                    "تحسين أداء التطبيقات باستخدام البرمجة غير المتزامنة وتوصيف Xcode، مما أدى إلى تجربة مستخدم أكثر سلاسة."
+                    "تحسين أداء التطبيقات باستخدام البرمجة غير المتزامنة وتوصيف Xcode، مما أدى إلى تجربة مستخدم أكثر سلاسة.",
+                    "التعامل مع قواعد بيانات CloudKit لإدارة البيانات ومزامنتها بكفاءة."
                 ]
             },
             techp: {
@@ -415,11 +416,11 @@ export const translations = {
                     title: "MVPLAB",
                     description: "تم اختياري في برنامج MVPLAB من البرنامج الوطني لتنمية قطاع تقنية المعلومات (NTDP) لدعم رواد الأعمال التقنيين وتسريع تطوير النماذج الأولية للمنتجات.",
                     badge: "MVPLAB",
-                    date: "٢٠٢٤",
+                    date: "٢٠٢٥",
                     link: "https://ntdp.gov.sa/"
                 },
                 {
-                    title: "منحة أكاديمية أبل للمطورين ",
+                    title: "منحة أكاديمية أبل للمطورين",
                     description: "القبول في منحة ريادية وتدريبية مكثفة في أكاديمية شركة أبل للمطورين (Apple Developer Academy | TUWAIQ) لتطوير مهارات البرمجة والتصميم.",
                     badge: "مقبول في المنحة",
                     date: "سبتمبر ٢٠٢٤",
@@ -436,7 +437,7 @@ export const translations = {
                     title: "برنامج ألف ميل لريادة الأعمال",
                     description: "حصول 'شحنة بلس' على المركز الثاني في برنامج 'ألف ميل' بإشراف (ندلب) ودعم وزاري، مع منحة مالية بقيمة 250,000 ريال.",
                     badge: "🥈 المركز الثاني",
-                    date: "أكتوبر ٢٠٢٤",
+                    date: "أكتوبر ٢٠٢٥",
                     link: "https://www.linkedin.com/posts/afrah-alharbi36_aeqaezaeuaepaetaeuabraepaesaepabraetaeyaes-activity-7367940658306633729-mnB7"
                 },
                 {
