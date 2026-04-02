@@ -128,13 +128,12 @@ export const translations = {
                 },
                 {
                     id: "face-detection",
-                    title: "Face Detection & Recognition System",
-                    description: "Developed a Python-based system using InceptionResNetV1 for Facial Recognition and MTCNN for Face Detection to count and identify known and unknown individuals in real-time video streams. Implemented real-time database connectivity for updating and querying face recognition results.",
-                    image: "/images/P1.png",
-                    type: "AI & Computer Vision",
+                    title: "FDR Security Web Platform",
+                    description: "Engineered a high-end web application for real-time Face Detection and continuous security surveillance. The platform seamlessly integrates a cutting-edge Python backend utilizing FaceNet (InceptionResNetV1) and MTCNN for exact facial analysis. It features a highly interactive and sophisticated security dashboard, backed by MongoDB for secure, instant tracking and logging of known and unknown individuals in live video streams.",
+                    image: "/images/FDR-WEB.png",
+                    type: "AI & Cybersecurity Web App",
                     links: [
-                        { text: "View Code", url: "https://github.com/AfrahSaud36/FDR-System" },
-                        { text: "Live Demo", url: "https://youtu.be/LlPWWpNDRnc" }
+                        { text: "View Code", url: "https://github.com/AfrahSaud36/FDR-System" }
                     ]
                 },
                 {
@@ -387,13 +386,12 @@ export const translations = {
                 },
                 {
                     id: "face-detection",
-                    title: "نظام كشف والتعرف على الوجه",
-                    description: "تم تطوير نظام قائم على بايثون باستخدام InceptionResNetV1 للتعرف على الوجه و MTCNN للكشف عن الوجه لعد وتحديد هوية الأشخاص المعروفين والمجهولين في تدفقات الفيديو المباشرة. تم تنفيذ اتصال بقاعدة بيانات في الوقت الفعلي لتحديث واستعلام نتائج التعرف على الوجه.",
-                    image: "/images/P1.png",
-                    type: "الذكاء الاصطناعي والرؤية الحاسوبية",
+                    title: "منصة FDR الويب الأمنية",
+                    description: "ابتكرت تطبيق ويب أمني متكامل واحترافي للمراقبة والكشف عن الوجوه في الوقت الفعلي. تعتمد المنصة على نماذج ذكاء اصطناعي رائدة مثل FaceNet و MTCNN بخلفية برمجية من البايثون لتحديد هوية الأفراد بدقة متناهية. يتميز النظام بلوحة تحكم أمنية فائقة التطور مدعومة بقاعدة بيانات MongoDB لتوفير تتبع دقيق، وتخزين سجلات المراقبة واستعلامها بشكل فوري في تدفقات الفيديو المباشرة.",
+                    image: "/images/FDR-WEB.png",
+                    type: "تطبيق ويب للذكاء الاصطناعي والأمن",
                     links: [
-                        { text: "عرض الكود", url: "https://github.com/AfrahSaud36/FDR-System" },
-                        { text: "عرض حي", url: "https://youtu.be/LlPWWpNDRnc" }
+                        { text: "عرض الكود", url: "https://github.com/AfrahSaud36/FDR-System" }
                     ]
                 },
                 {
